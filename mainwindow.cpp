@@ -35,7 +35,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::loadFromFile()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "/home/", tr("Text Files (*.txt)"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), QDir::currentPath(), tr("Text Files (*.txt)"));
     QFile file(fileName);
     QString line;
     ui->te_left->clear();
@@ -52,7 +52,7 @@ void MainWindow::loadFromFile()
 
 void MainWindow::saveToFile()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"), "/home/untitled.txt", tr("Text Files (*.txt)"));
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"), QDir::currentPath(), tr("Text Files (*.txt)"));
     if (fileName != "")
     {
         QFile file(fileName);
