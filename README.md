@@ -1,1 +1,1 @@
-# morse_code
+# Morse code translate (Qt)
